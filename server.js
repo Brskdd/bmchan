@@ -8,12 +8,18 @@ const path = require("path");
 app.use(express.urlencoded({ extended: true }));
 
 app.get("", (req, res) => {
-    const filepath = path.join(__dirname, "", "index.html");
+    const filepath = path.join(__dirname, "/src", "index.html");
+    res.sendFile(filepath);
+});
+
+app.get("/rules", (req, res) => {
+    console.log("test");
+    const filepath = path.join(__dirname, "/src", "rules.html");
     res.sendFile(filepath);
 });
 
 /*app.get("/login", (req, res) => {
-    const filepath = path.join(__dirname, "", "login.html");
+    const filepath = path.join(__dirname, "/src", "login.html");
     res.sendFile(filepath);
 });*/
 
