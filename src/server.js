@@ -12,6 +12,11 @@ app.get("", (req, res) => {
     res.sendFile(filepath);
 });
 
+/*app.get("/login", (req, res) => {
+    const filepath = path.join(__dirname, "", "login.html");
+    res.sendFile(filepath);
+});*/
+
 const port = 3000;
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}/`);
