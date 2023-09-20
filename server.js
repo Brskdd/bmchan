@@ -18,6 +18,38 @@ app.get("/rules", (req, res) => {
     res.sendFile(filepath);
 });
 
+app.get("/s", (req, res) => {
+    console.log("test");
+    const filepath = path.join(__dirname, "/src", "s.html");
+    res.sendFile(filepath);
+});
+
+app.get("/b", (req, res) => {
+    console.log("test");
+    const filepath = path.join(__dirname, "/src", "b.html");
+    res.sendFile(filepath);
+});
+
+app.get("/homebanner", (req, res) => {
+    const filepath = path.join(__dirname, "/media", "homebanner.png");
+    res.sendFile(filepath);
+});
+
+app.get("/rulesbanner", (req, res) => {
+    const filepath = path.join(__dirname, "/media", "rulesbanner.png");
+    res.sendFile(filepath);
+});
+
+app.get("/sbanner", (req, res) => {
+    const filepath = path.join(__dirname, "/media", "sbanner.png");
+    res.sendFile(filepath);
+});
+
+app.get("/bbanner", (req, res) => {
+    const filepath = path.join(__dirname, "/media", "bbanner.png");
+    res.sendFile(filepath);
+});
+
 /*app.get("/login", (req, res) => {
     const filepath = path.join(__dirname, "/src", "login.html");
     res.sendFile(filepath);
